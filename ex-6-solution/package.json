@@ -1,0 +1,16 @@
+{
+  "name": "ex-6",
+  "version": "1.0.0",
+  "description": "BTH013 exercise 6 implementing server endpoints.",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "server": "node server/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Per-Olof Bengtsson",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

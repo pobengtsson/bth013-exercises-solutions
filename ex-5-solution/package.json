@@ -1,0 +1,17 @@
+{
+  "name": "vue-routing-exercise",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite serve"
+  },
+  "dependencies": {
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.0"
+  },
+  "devDependencies": {
+    "vite": "^2.0.0",
+    "@vitejs/plugin-vue": "^1.0.0"
+  }
+}

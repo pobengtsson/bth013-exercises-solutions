@@ -2,13 +2,20 @@
 
 ## Purpose
 
-This exercise is designed to help you get started with writing web UI test cases using Cypress. You will work on a given web application that has a number of (intentional) bugs. Your task is to write test cases that expose these bugs. The correct functions are simple to understand and the planted bugs are easy to tell apart from the correct function. The purpose is to learn how to write test cases, run the test cases, understand the test case results and to be able to tell if the error message is an error in the test case or an error in the target code, or both.
+This exercise is designed to help you get started with writing web UI test cases using Cypress.
+
+The purpose of this exercise is for you to learn how to write test cases, run the test cases, understand the test case results and to be able to tell if the error message is an error in the test case or an error in the target code, or maybe even both.
 
 ## Assignment
 
-Read through this assignment to the end before starting.
+Completely read through this assignment to the end before starting.
 
-In this exercise you get a Vue.js 3 application that has a number of functions. Each functionality also has a hidden bug. Your goal is to implement test cases for each correct functionality such that the existing bugs are exposed. The functions are simple and the bugs are easy to spot.
+In this exercise you get the code and config of a Vue.js 3 application that has a number of functions. Each functionality also has a (intentional) hidden bug.
+
+**Your task is to write test cases that expose these bugs.**
+You will do this by writing test code that fails on a test run where the bugs are active and passes on test runs where the bugs are fixed (inactive).
+
+Your task is to implement test cases for each correct functionality such that the existing bugs are exposed. The correct functions are easy to understand and the intentionally planted bugs are easy to tell apart from the correct function.
 
 This means that you need to figure out how to describe these functions as test cases and make sure that if the bug is removed the test passes.
 
@@ -16,10 +23,10 @@ The suggested way to work with this is:
 
 1) Read the specification of the first function and create a cypress test case
 2) Run the test case against the provdided app code.
-   The result should be test case that runs as expected without crashing, and but does not pass.
-3) Now, carefully, study the test result, the source code of the app and try to figure out if your test case found a bug, or if your test case failed because it had misunderstood how the function should work or it was based on assumptions that turned out to be wrong.
+   The result should be test case that runs as expected without crashing, and does not pass.
+3) Now, carefully study the test results, the source code of the app and try to figure out if your test case uncovered a bug, or if your test case failed because it had misunderstood the function or it was based on other false assumptions.
 4) If your test case exposed the bug,
-   then update the web app code to fix the bug and re-run the tests. It should now pass.
+   then run the tests again with the bugs inactive to verify that your test case, indeed, passes in the absence of the injected bug. Normally, you would fix the bug and re-run the tests, but for the purpose of this exercise, we don't and instead run in development and production mode.
 4) If your test case crashed or didn't find the bug, then update your test code and repeat from step 2.
 5) Move to the next function. It is strongly recommended to work one function spec at a time.
 
@@ -37,7 +44,7 @@ The suggested way to work with this is:
 
 ## Notes
 
-- Do not assume the existence of bugs; your test cases should validate that the application works as described.
+- Do not assume the existence of bugs; your test cases should validate that the application behaves as described in the functions' specifications.
 - Pay attention to detail and consider edge cases in your test scenarios.
 - Use Cypress best practices for writing your test cases.
 
@@ -53,26 +60,25 @@ Good luck!
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+### Compile and Hot-Reload for Development (HAS BUGS ACTIVE)
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compile and Minify for Production (BUGS INACTIVE)
 
 ```sh
 npm run build
 ```
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+### Run End-to-End Tests (BUGS ACTIVE) with [Cypress](https://www.cypress.io/)
 
 ```sh
 npm run test:e2e:dev
 ```
 
-### Lint with [ESLint](https://eslint.org/)
-
+### Run End-to-End Tests (BUGS INACTIVE)
 ```sh
-npm run lint
+npm run test:e2e
 ```

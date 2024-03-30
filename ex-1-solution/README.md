@@ -1,51 +1,66 @@
-# ex-1-solution
+# Exericse 1
 
-This template should help get you started developing with Vue 3 in Vite.
+The purpose of this exercise is to get started with a small and simple Vue.js 3 web application
 
-## Recommended IDE Setup
+## Incremental
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+The idea is that you do this exercise in steps of increasing difficulty and complexity.
 
-## Customize configuration
+This exercise comes with premade cypress test case file. Run it repeatedly to get automatic feedback on when you have completed each step. When all tests pass, you have completed the exercise. Well done!
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+## Instructions
 
-## Project Setup
+## Setup:
+* Clone the exercises repo (you should only need to do this once to get all the exercises for the course.)
+```bash
+$ cd ~/proj
+$ git clone git@github.com:pobengtsson/bth013-exercises.git
+```
+* Set your working directory to the first exercise folder:
+```bash
+$ cd bth013-exercises/ex-1
+```
+* Create a new project by running the following command and making the relevant choices. This is the first part of the exercise where you need to understand what choices to make when initiating a new Vue.js project.
+```bash
+$ npm init vue@3
+$ npm install
+```
+* So now you have a initial project. Now, copy the file `exercise1.cy.js` to the `cypress/e2e` folder.
 
-```sh
-npm install
+* Build the initially generated code.
+```bash
+$ npm run build
 ```
 
-### Compile and Hot-Reload for Development
-
-```sh
-npm run dev
+* Run the test cases using the command below. You should a set of failing tests. Did you? Great, well done, you are ready to continue to the first programming step, Step 1:
+```bash
+$ npm run test:e2e
 ```
 
-### Compile and Minify for Production
+* Next, implement each step and continue to next step when the test case passes.
+- preview your app by running: `npm run preview` and open the app in your browser.
+- Remember to rebuild as soon as you have made changes to your app that you want to test by running the command: `npm run test:e2e`
 
-```sh
-npm run build
-```
+## Coding steps
+Here's a initial instruction for each step. It will likely be necessary for you to read the cypress test code for each step to completely understand what you need to code for each step to pass the tests.
 
-### Run Headed Component Tests with [Cypress Component Testing](https://on.cypress.io/component)
+### Step 1: Hello world!
+Add a <span> element that displays the text: "Hello World!"
 
-```sh
-npm run test:unit:dev # or `npm run test:unit` for headless testing
-```
+### Step 2: input field
+Add an input that outputs anything that is typed into it to another <span> element on the page.
 
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
+### Step 3: Styling
+Add styling so that all <span> elements use the Arial font-family.
 
-```sh
-npm run test:e2e:dev
-```
+### Step 4: Alert - Click of a Button
+Add a button that, when clicked, shows an alert that says 'Greetings earthling! We come in peace'.
 
-This runs the end-to-end tests against the Vite development server.
-It is much faster than the production build.
+### Step 5: React to input
+Add code so that when user types into the input field, an element shows the number of characters that is currently visible in the input.
 
-But it's still recommended to test the production build with `test:e2e` before deploying (e.g. in CI environments):
+### Step 6: Render a list
+Add another button that when clicked adds the text "An Item" to a list that is displayed as an unnumbered list <ul>.
 
-```sh
-npm run build
-npm run test:e2e
-```
+### Step 7: Now you see me, now you don't
+Add a button and an <div> element that display a text "Present in the DOM", and implment a handler so that when the button is clicked it toggles between making the <div> element part of the DOM and removing it. Hint v-if.
