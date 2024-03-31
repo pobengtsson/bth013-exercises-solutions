@@ -2,7 +2,7 @@
   <div id="app">
     <span>Hello World!</span>
     <input v-model="inputText" placeholder="Type something...">
-    <span v-if="inputText" style="font-family: Arial; color: darkblue;">{{ inputText }}</span>
+    <span v-if="inputText" >{{ inputText }}</span>
     <button @click="showAlert">Click Me</button>
     <p class="char-count">Character count: {{ inputText.length }}</p>
     <button @click="addItem">Add Item Button</button>
