@@ -11,14 +11,14 @@ describe('Input Field Display', () => {
 
 describe('TO UPPERCASE Button', () => {
   it('should transform the displayed text to uppercase', () => {
-    cy.visit('/');
+    cy.visit('/')
     cy.get('input[placeholder="Enter text here"]').type('Hello');
-    cy.contains('button', 'TO UPPERCASE').click();
+    cy.contains('button', 'TO UPPERCASE').click()
     cy.get('div[data-test-id="echoInput"]').then(($div) => {
       expect($div.text().trim()).to.equal('HELLO')
     })
-  });
-});
+  })
+})
 
 describe('Font Style of Text Element', () => {
   it('should display the text in Times New Roman font', () => {
