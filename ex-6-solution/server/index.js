@@ -16,6 +16,7 @@ app.post('/api/store', (req, res) => {
     if (!text) {
         return res.status(400).json({ error: 'Text is empty or missing' });
     }
+    res.cookie('bth013', text + "-COOKIE")
     // Check for "FAILURE" text to simulate a server-side error
     if (text === "FAILURE") {
         return res.status(503).send('Service Unavailable');

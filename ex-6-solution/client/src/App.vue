@@ -6,6 +6,8 @@
     <button @click="triggerError">Trigger Error</button>
     <input v-model="retrievedText" readonly placeholder="Retrieved text will appear here" />
     <div v-if="errorMessage" class="error">{{ errorMessage }}</div>
+    <button @click="getCookieText">GET Cookie text</button>
+    <div>{{ cookieText || "No cookie set!"}}</div>
   </div>
 </template>
 
@@ -19,9 +21,16 @@ export default {
       textInput: '',
       retrievedText: '',
       errorMessage: '',
+      cookieText: '',
     };
   },
+  created() {
+    this.getCookieText()
+  },
   methods: {
+    getCookieText() {
+      this.cookieText = document.cookie
+    },
     async storeText() {
       try {
         await axios.post('/api/store', { text: this.textInput });
