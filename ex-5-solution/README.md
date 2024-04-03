@@ -47,8 +47,6 @@ The goal is to build a web application themed around navigating through differen
 1. **Dynamic Routing:**
    - Add a route for a `Gallery` room with a dynamic path parameter (e.g., `/gallery/:pictureId`). Use this parameter in the `Gallery` component to display specific content.
    - in the App.vue, add two navigation links with URL params for two different images (of your choice) and make sure those images are shown in the gallery when clicking on the respective navigation links.
-2. **Nested Routes:**
-   - Create a `House.vue` component as a nested layout that includes several rooms. Define children routes within the `House` route to include `LivingRoom`, `Kitchen`, etc., as nested routes.
 
 #### Part 5: Navigation Guards and Router Hooks
 1. **Global and Component-level Guards:**

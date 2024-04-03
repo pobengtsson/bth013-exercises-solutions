@@ -1,10 +1,13 @@
 <template>
-  <div>
+  <div class="room living-room">
     <h1>Living Room</h1>
-    <!-- Any specific living room content goes here -->
   </div>
 </template>
 
-<script setup>
-// Import APIs or components if needed
-</script>
+<style>
+.living-room {
+  background-color: #d1c4e9; /* Light purple */
+  padding: 20px;
+  border-radius: 10px;
+}
+</style>

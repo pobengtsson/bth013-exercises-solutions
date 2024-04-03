@@ -1,10 +1,13 @@
 <template>
-  <div>
+  <div class="room bathroom">
     <h1>Bathroom</h1>
-    <!-- Any specific bathroom content goes here -->
   </div>
 </template>
 
-<script setup>
-// Import APIs or components if needed
-</script>
+<style>
+.bathroom {
+  background-color: #b2dfdb; /* Mint green */
+  padding: 20px;
+  border-radius: 10px;
+}
+</style>

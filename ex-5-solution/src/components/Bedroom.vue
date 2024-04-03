@@ -1,10 +1,13 @@
 <template>
-  <div>
+  <div class="room bedroom">
     <h1>Bedroom</h1>
-    <!-- Any specific bedroom content goes here -->
   </div>
 </template>
 
-<script setup>
-// Import APIs or components if needed
-</script>
+<style>
+.bedroom {
+  background-color: #b3e5fc; /* Light blue */
+  padding: 20px;
+  border-radius: 10px;
+}
+</style>
