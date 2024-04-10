@@ -4,7 +4,7 @@
 The purpose of this exercise is for you to learn, practice and explore data and state management in Vue.js and using Pinia.
 
 ## Setup
-1. **Project Initialization**: Initialize a new Vue.js project using Vue CLI or Vite. Ensure Vue 3 is selected during setup.
+1. **Project Initialization**: Initialize a new Vue.js project using `npm init vue@3`.
 
 ## Step 1: Local State and Basic Component Architecture
 - **Task 1.1**:

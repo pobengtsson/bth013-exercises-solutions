@@ -10,7 +10,7 @@ The goal is to build a web application themed around navigating through differen
 
 #### Part 1: Project and Vue Router Setup
 1. **Create a New Vue.js Project:**
-   - Use Vue CLI to create a new project. Enable Vue Router when prompted, choosing the history mode.
+   - Use `npm init vue@3` to create a new project. Enable Vue Router when prompted, choosing the history mode.
 2. **Setup Vue Router:**
    - In the `src/router/index.js` file, ensure Vue Router is imported and a router instance is created.
    - Use `createWebHistory` to enable history mode for clean URLs.
