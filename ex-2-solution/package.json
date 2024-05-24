@@ -24,6 +24,6 @@
     "eslint-plugin-cypress": "^2.15.1",
     "eslint-plugin-vue": "^9.17.0",
     "start-server-and-test": "^2.0.3",
-    "vite": "^5.0.11"
+    "vite": "^5.1.7"
   }
 }
