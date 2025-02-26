@@ -11,6 +11,6 @@
   "author": "Per-Olof Bengtsson",
   "license": "GPL-3.0",
   "dependencies": {
-    "express": "^4.19.2"
+    "express": "^4.21.2"
   }
 }
